@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_order"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/prdctImage"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:padding="4dp"
+            android:src="@drawable/index" />
+        <TextView
+            android:id="@+id/prId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#FFFFFF"
+            android:padding="5dp"
+            android:background="@drawable/qtyback"
+            />
+
+        <TextView
+            android:id="@+id/prdctName"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prdctImage"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Text Show"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/prdctPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prdctName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+
+            android:text="13.3 Inch, 256 GB"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+        <TextView
+            android:id="@+id/prdctPriceunit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prdctName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/prdctPrice"
+            android:text=""
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+        <LinearLayout
+            android:id="@+id/btncount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prdctPrice"
+            android:orientation="horizontal"
+            android:tooltipText="10dp"
+            >
+
+            <Button
+                android:id="@+id/decrease"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:textSize="25dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/border_order"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="-" />
+
+
+
+            <Button
+                android:id="@+id/increase"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:textSize="25dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/border_order"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="+" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

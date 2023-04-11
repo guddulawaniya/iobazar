@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Storeproduct"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/headercrt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:id="@+id/prdLay"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal" >
+            <ImageView
+                android:layout_width="20dp"
+                android:id="@+id/back"
+                android:layout_height="20dp"
+                android:src="@drawable/left" />
+            <TextView
+                android:id="@+id/HeaderStrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/prdLink"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/home" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- footer aligned to top -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/radious_button_dl">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/crtcnt"
+                    android:text="1 ITEM "
+                    android:layout_width="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="#fff"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/viewPrise"
+                        android:text="₹135"
+                        android:layout_width="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#fff"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="Plus Taxes"
+                        android:paddingLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:textSize="10dp"
+                        android:textColor="#fff"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:text="Next"
+                android:layout_width="wrap_content"
+                android:paddingTop="5dp"
+                android:textSize="18dp"
+                android:textColor="#fff"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/clickBtn"
+        android:layout_width="wrap_content"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menubuttonradious"
+        android:text="Browse Menu"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="85dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headercrt"
+        android:layout_above="@+id/footer"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:id="@+id/crtfull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headercrt"
+                android:id="@+id/prdDtl"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+                    <ImageView
+                        android:id="@+id/strImage"
+                        android:layout_width="120dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/index"
+                        android:padding="4dp" />
+                    <TextView
+                        android:id="@+id/strName"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/strImage"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:id="@+id/stradrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/strName"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/strImage"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+                    <View
+                        android:layout_width="320dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/stradrs"
+                        android:layout_toRightOf="@id/strImage"
+                        android:background="#6c757d"
+                        android:layout_marginLeft="0dp"/>
+                    <TextView
+                        android:id="@+id/star"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/stradrs"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/strImage"
+                        android:background="@drawable/star"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/strRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stradrs"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/star"
+                        android:textSize="12dp"
+                        android:textColor="#fba200"
+                        android:paddingRight="15dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/strTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stradrs"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#6c757d"
+                        android:textSize="12dp"
+                        android:layout_toRightOf="@id/strRating"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/strMaximum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stradrs"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#6c757d"
+                        android:layout_toRightOf="@id/strTime"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prdDtl"
+                android:id="@+id/prdhtxt"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="#999C9E"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:id="@+id/srchlnr"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    >
+                    <TextView
+                        android:id="@+id/scrTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="Search for Stores or items..."
+                        />
+                    <ImageView
+                        android:id="@+id/scrImg"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/explore" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prdhtxt"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textprName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="#1C1C1B"
+                        android:text="RECOMMENDED"
+                        android:layout_gravity="right" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fc8019"
+                        android:text="Home > "
+                        android:layout_gravity="left"/>
+
+                    <TextView
+                        android:id="@+id/storeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fc8019"
+                        android:text="Gopal General Store  "
+                        android:layout_gravity="right" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        android:layout_below="@id/linearLayout1"
+        android:id="@+id/Scrl">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommendedIdList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
+    </RelativeLayout>
+    -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:layout_above="@id/footer"
+                android:id="@+id/list1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/header"
+                    android:id="@+id/Scrl">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/List_crt_pr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/notData"
+                android:layout_below="@+id/prdhtxt"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20dp"
+                    android:text="No item in this store"/>
+            </RelativeLayout>
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:layout_above="@+id/footer"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <!-- Adding 3 rows of placeholders -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/skeleton_row_layout" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <!--
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/categorySkeleton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/skeletoncategory" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>-->
+            <com.facebook.shimmer.ShimmerFrameLayout
+
+                android:id="@+id/skeletonStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headercrt"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <!-- Adding 3 rows of placeholders -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/storeskeleton" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

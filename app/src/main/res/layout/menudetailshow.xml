@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Estacionamiento prohibido"
+        android:id="@+id/MenuName"
+        android:textColor="#000" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="12"
+        android:id="@+id/MenuCount"
+        android:textColor="#000" />
+
+</RelativeLayout>

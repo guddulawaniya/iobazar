@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#e9ecef"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:textColor="#000"
+            android:text="Create your account"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:text="Enter your Detail"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_centerInParent="true">
+            <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:background="#dddd"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:maxLines="1"
+                android:padding="12dp"
+                android:hint="Enter Your Name"
+                android:inputType="textPersonName"
+                android:id="@+id/username"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:background="#dddd"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="12dp"
+                android:hint="Enter Your Email"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:id="@+id/email"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterMaxLength="10">
+            <EditText
+                android:layout_width="match_parent"
+                android:background="#dddd"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="12dp"
+                android:hint="Enter Your Number"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                android:maxLines="1"
+                android:inputType="number"
+                android:id="@+id/number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:passwordToggleEnabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:background="#dddd"
+                android:maxLines="1"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:passwordToggleEnabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Re Enter Password"
+                android:background="#dddd"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"
+                android:maxLines="1"
+                app:passwordToggleEnabled="true"
+                android:id="@+id/repassword"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Registration"
+            android:background="@drawable/radious_button_dl"
+            android:textColor="#fff"
+            android:id="@+id/registration"/>
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:stretchColumns="*"
+            android:textSize="22dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp">
+            <TableRow
+                android:gravity="center_horizontal">
+                <TextView
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:textSize="15dp"
+                    android:text="Already have an account?" />
+                <TextView
+                    android:gravity="left"
+                    android:textColor="#CD5C5C"
+                    android:id="@+id/login"
+                    android:textSize="15dp"
+                    android:text="Login" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>
+

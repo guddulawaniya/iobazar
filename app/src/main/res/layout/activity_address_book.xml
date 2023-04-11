@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".CartView"
+    android:layout_height="wrap_content" >
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+        <LinearLayout
+            android:id="@+id/BackButton"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:id="@+id/adrLink1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+                <ImageView
+                    android:id="@+id/lefttbn"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/left"
+                    android:layout_gravity="left" />
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:text="My Address"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/adrLink"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/home"
+                    android:layout_gravity="left" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/AddressLine"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/cartradious"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" + Add Addresses"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AddressLine">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AddressList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Address"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:id="@+id/AddressBookImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:text="Save addresses to make home delivery more convenient"/>
+
+                <TextView
+                    android:id="@+id/AddressLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Address"
+                    android:textAlignment="center"
+                    android:textSize="35dp"
+                    android:textColor="#EC0A0A"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>

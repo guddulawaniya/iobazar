@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0000"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/mainheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="177dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.07"
+        android:text="Statozone"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textFontWeight="700"
+        android:textSize="70dp"
+        android:textStyle="italic" />
+    <TextView
+        android:id="@+id/secndheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainheading"
+        android:text="Stationary Online zone"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+
+        android:textColor="#E6E6E6"
+        android:textSize="30dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secndheading"
+        android:text="India"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#E1588F"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:gravity="bottom"
+        android:padding="20dp"
+        android:src="@drawable/logo"
+        android:textAlignment="center" />
+
+
+
+</RelativeLayout>

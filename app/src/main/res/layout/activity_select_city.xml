@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SelectCity">
+  <SearchView
+      android:id="@+id/searchView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:queryHint="Search Here"
+      android:iconifiedByDefault="false"
+      android:layout_alignParentTop="true"/>
+  <LinearLayout
+      android:id="@+id/mapButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="60dp"
+      android:clickable="true"
+      android:padding="16dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="20dp"
+        android:maxWidth="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/map" />
+
+    <TextView
+        android:id="@+id/tvSearchCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="15sp"
+        android:textColor="#F12212"
+        android:paddingLeft="15dp"
+        android:gravity="center"
+        android:text="Use Current Location" />
+  </LinearLayout>
+  <TextView
+      android:id="@+id/text_view_id"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="110dp"
+      android:layout_marginLeft="35dp"
+      android:textStyle="bold"
+      android:textSize="20sp"
+      android:textColor="#6c747c"
+      android:layout_width="wrap_content"
+      android:text="Popular Places" />
+
+  <GridView
+      android:id="@+id/idGVcourses"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="150dp"
+
+      android:horizontalSpacing="9dp"
+      android:numColumns="3"
+      app:cardCornerRadius="25dp"
+      android:verticalSpacing="3dp" />
+</RelativeLayout>

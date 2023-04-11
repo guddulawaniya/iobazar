@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".CartView"
+    android:layout_height="match_parent" >
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:id="@+id/adrLink1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+                <ImageView
+                    android:id="@+id/lefttbn"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/left"
+                    android:layout_gravity="left" />
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:text="Order Id - "
+                    android:layout_gravity="right"/>
+                <TextView
+                    android:id="@+id/ordercode"
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:text="Order Id"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/adrLink"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/home"
+                    android:layout_gravity="left" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#0000">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:background="#cd5c5c"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:text="Order Placed"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        tools:context=".ProductView">
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dp"
+                    android:text="Order Placed Successfully "
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/profileName"
+                    android:paddingLeft="5dp"
+                    android:text="Wait for the statozone to confirm your order "
+                    android:textColor="#535353"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/imageGif"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

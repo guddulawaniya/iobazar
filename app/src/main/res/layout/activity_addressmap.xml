@@ -1,0 +1,157 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:id="@+id/adrLink1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+                <ImageView
+                    android:id="@+id/lefttbn"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                    android:layout_gravity="left" />
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:text="Choose delivery location"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <fragment
+        android:id="@+id/myMap"
+        android:layout_below="@+id/header"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_baseline_location_on_24"/>
+    <RelativeLayout
+        android:id="@+id/currentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:background="@drawable/back_address_button">
+<LinearLayout
+    android:paddingTop="7sp"
+    android:paddingBottom="7sp"
+    android:paddingLeft="15sp"
+    android:paddingRight="15sp"
+    android:background="#ffff"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/image2"
+        android:paddingTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_location_searching_24"/>
+    <TextView
+        android:text="Use current location"
+        android:textSize="14sp"
+
+        android:paddingLeft="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+
+        android:textColor="#D81010" />
+</LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:id="@+id/LocationShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/lefttbn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_location_on_24"
+                        android:layout_gravity="left" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="2"
+                        android:textSize="20sp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2"
+                        android:textColor="#000000"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:text="2"
+                        android:textSize="20sp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+                        android:textColor="#141414"
+                        android:layout_alignParentRight="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:text="Confirm address"
+                android:textSize="15sp"
+                android:padding="12sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:background="@drawable/back_address_button"
+                android:gravity="center"
+                android:textColor="#EEEEEE" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

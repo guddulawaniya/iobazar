@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/prdctImage"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/index"
+                android:padding="4dp" />
+            <TextView
+                android:id="@+id/prdctQty"
+                android:background="@drawable/qtyback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginLeft="5dp"
+                android:text="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#fff" />
+            <TextView
+                android:id="@+id/prdctName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/prdctImage"
+                android:text="Text Show"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#000000" />
+
+         <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/prdctImage"
+    android:layout_below="@id/prdctName">
+    <TextView
+        android:id="@+id/prdctPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prdctName"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/prdctImage"
+        android:text="13.3 Inch, 256 GB"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+    <TextView
+        android:id="@+id/prdctPriceunit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+    <TextView
+        android:id="@+id/addbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radious_button_dl"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:text="ADD +"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:id="@+id/btncount"
+                 android:tooltipText="10dp"
+                 android:layout_height="wrap_content"
+                 android:visibility="gone"
+                 android:orientation="horizontal">
+
+                 <Button
+                     android:id="@+id/decrease"
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:layout_alignParentStart="true"
+                     android:layout_alignParentLeft="true"
+                     android:text="-" />
+
+                 <TextView
+                     android:id="@+id/integer_number"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="16dp"
+                     android:layout_marginLeft="4dp"
+                     android:layout_marginRight="4dp"
+                     android:layout_marginTop="2dp"
+                     android:text="0"
+                     android:textStyle="bold"
+                     android:textSize="20sp" />
+
+                 <Button
+                     android:id="@+id/increase"
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:layout_alignParentStart="true"
+                     android:layout_alignParentLeft="true"
+                     android:text="+" />
+             </LinearLayout>
+</LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/prt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Qty"
+                android:text="2X"
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:paddingRight="3dp"
+                android:textColor="#000"
+                android:paddingLeft="5dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/crtcnt"
+                android:text="Product Name "
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:singleLine="true"
+
+                android:ellipsize="end"
+                android:textColor="#000"
+                android:paddingLeft="5dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="14dp"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/crtcnt2"
+                android:text="₹ 227"
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

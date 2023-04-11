@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    tools:context=".Explore"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/prdctImage"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:src="@drawable/index"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/prdctName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/prdctImage"
+            android:text="Text Show"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/StrBy"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_below="@id/prdctName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/prdctImage"
+
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#575757"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/StrName"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_below="@id/prdctName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/StrBy"
+
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#fc8019"
+            android:textStyle="bold" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/StrBy"
+            android:textColor="#f04253"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/prdctImage"
+            android:text="MRP: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+        <TextView
+            android:id="@+id/prdctPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/StrBy"
+            android:textColor="#f04253"
+            android:textStyle="bold"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/prdctImage"
+            android:text="b"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/StrBy"
+
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/prdctImage"
+            android:text="Price: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+
+        <TextView
+            android:id="@+id/UnitPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/StrBy"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/prdctPrice"
+            android:text="a"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</LinearLayout>
